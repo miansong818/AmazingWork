@@ -3,17 +3,17 @@
 */
 
 const getCounts=(n, m)=>{
- // if n or m = 0 . will return 0
- let result = 0;
- if(n===0){
-    result = 1
- } else if( n<0 || m===0){
-    result = 0
- } else {
+  // if n or m = 0 . will return 0
+  let result = 0;
+  if (n===0) {
+    result = 1;
+  } else if ( n<0 || m===0) {
+    result = 0;
+  } else {
     result = getCounts(n-m, m)+getCounts(n, m-1);
-    }
- 
- return result;
-}
+  }
 
-console.log(getCounts(4,4))
+  return result;
+};
+
+console.log(getCounts(4, 4));

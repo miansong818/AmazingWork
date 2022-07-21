@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * input is sorted array of integers [2,4,5,5,5,5,6,7]
  * target = 5
@@ -6,7 +7,7 @@
 */
 
 const fn=(arr)=>{
-    /**
+  /**
      * start traversing from the start to the end in the array
      * T(n) = O(n)
      * S(n) = O(1), bec using in loop
@@ -20,18 +21,18 @@ const fn=(arr)=>{
      *      return [-1, -1]
      *
      */
-   
-    /**
+
+  /**
      * Solution2: use B-tree
      *  T(n) = 2 * O(logn) = O(logn) (use b-tree twice)
      *  S(n) = O(1)
-     * 
+     *
      * * find the start
      * //start from begining
      * findStart=(arr,target)={
      * if arr[0] == target return 0
      * left, right = 0; len(arr)-1
-     * 
+     *
      * while left<=right:
      *  mid = (left+right)/2
      *  if arr[mid] == target and arr[mid-1]<target
@@ -39,10 +40,10 @@ const fn=(arr)=>{
      *  elseif arr[mid] < target
      *      left = mid + 1
      *  else right = mid -1
-     * 
+     *
      * return -1
      * }
-     * 
+     *
      * find the end
      * end with the last element
      * findEnd=(arr,target)={
@@ -55,17 +56,17 @@ const fn=(arr)=>{
      *      elseif arr[mid] > target
      *          right = mid -1
      *      else left = mid +1
-     * 
+     *
      *  return -1
      * }
-     * 
+     *
      * find the start
-     * 
+     *
      * final function:
      * if len(arr)==0 or arr[0]> target or arr[-1]< target: return [-1, -1]
-     * 
+     *
      * start = findStart()
      * end = findEnd()
      * return [start, end]
     */
-}
+};
